@@ -2,17 +2,11 @@ import cv2
 import time
 import numpy as np
 
-'''
-Purpose: capture a give number of pictures from two cameras connected to the same computer.
-Note: the camera index in VideoCapture might need to be adjusted.
-'''
-
-
-# Initialize cameras (2 cameras - for stereo 3D)
+# Initialize cameras
 c1 = cv2.VideoCapture(1)
 c2 = cv2.VideoCapture(2)
 
-# set the number of images to capture
+# set the number of samples
 num_samples = 2
 
 # open stream
@@ -32,6 +26,6 @@ for i in range(0,num_samples):
     _,f2 = c2.read()
     # write frames to a file
     print("Saving pictures...")
-    cv2.imwrite("output/calibration_pics/c1/c1t%d.png"%(i),f1)
-    cv2.imwrite("output/calibration_pics/c2/c2t%d.png"%(i),f2)
+    cv2.imwrite("outputHT/calibration_pics/w1/c1t%d.png"%(i),f1)
+    cv2.imwrite("outputHT/calibration_pics/w2/c2t%d.png"%(i),f2)
     print("Pictures saved.")

@@ -1,9 +1,5 @@
 import cv2
 
-'''
-Purpose: Get the feed from two webcams connected to a computer.
-'''
-
 cv2.namedWindow("Camera 1")
 cv2.namedWindow("Camera 2")
 vc1 = cv2.VideoCapture(1)
